@@ -1,0 +1,53 @@
+{
+  "icons": [
+    {
+      "src": "icon_1280x1280.4701bc9f88a78e4663378e5f7f29fc33.png",
+      "sizes": "1280x1280",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon_1024x1024.9d94119256e8b01f023d32a10533cbce.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_512x512.d7a05081820676493074e9ddfac97d84.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_384x384.a5e2524f8de0fab8c94ca2f51602e4cc.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_256x256.70820b8a24ea21d3bceb76118d7f0ea6.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_192x192.1acd52da0ac88b16132df128b5546229.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_128x128.bb1e4d68a98fa665ccb1aefc5e8c2a33.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_96x96.ebb7aef75e1b141b412fe499d4044e34.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "RNAC Routine Timer",
+  "short_name": "RNAC Timer",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "RNAC Routine Timer",
+  "background_color": "#000000",
+  "theme_color": "#87ceeb"
+}
