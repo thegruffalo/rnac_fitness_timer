@@ -10,7 +10,7 @@ export default
                         "duration": 30
                     },
                     {
-                        "name": "Arm up and left",
+                        "name": "Arms up and left",
                         "duration": 30
                     },
                     {

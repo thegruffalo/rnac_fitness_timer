@@ -1,6 +1,6 @@
 {
     "name": "rnac_routine_timer",
-    "version": "1.0.2",
+    "version": "1.0.18",
     "description": "Progressive Web App (PWA) Fitness Routine Timer",
     "main": "app.js",
     "scripts": {

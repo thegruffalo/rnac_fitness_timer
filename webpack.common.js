@@ -96,7 +96,7 @@ module.exports = {
             name: 'RNAC Routine Timer',
             short_name: 'RNAC Timer',
             description: 'RNAC Routine Timer',
-            background_color: '#fdfdfd',
+            background_color: '#000000',
             theme_color: "#87ceeb",
             icons: [
               {
