@@ -12,7 +12,7 @@ export default
             ],
             "sets": 1,
             "duration_between_sets": 0,
-            "start_delay": 5,
+            "start_delay": 3,
             "end_delay": 0
         },
         {
