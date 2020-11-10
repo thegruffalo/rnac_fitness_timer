@@ -119,7 +119,7 @@ class RoutineTimer {
 }
 
 const startRoutine = (routine) => {
-  u("#routine_detail .container").remove();
+  removeRoutineDetail();
 
   myNS.routine_timer = new RoutineTimer(routine, (rt) => {
     document.getElementById("routine_timer_display").innerHTML = showRoutineTimerDisplay(rt,
@@ -133,11 +133,7 @@ const startRoutine = (routine) => {
   u("#routine_timer #end").on("click", (ev) => {
     myNS.routine_timer.pause();
     if (confirm("Are you sure you want to end?")) {
-      u("#routine_timer .container").remove();
-      myNS.routine_timer = null;
-      wakeLock.release();
-      wakeLock = null;
-      displayRoutineList();
+      endRoutine();
     }
     else {
       myNS.routine_timer.unpause();
@@ -151,20 +147,36 @@ const startRoutine = (routine) => {
     }
   });
   u("#routine_timer #ok").on("click", (ev) => {
-    u("#routine_timer .container").remove();
-    myNS.routine_timer = null;
-    wakeLock.release();
-    wakeLock = null;
-    displayRoutineList();
+    endRoutine();
   });
 
 }
 
+const endRoutine = () =>{
+  console.log("End Routine");
+  console.log("Remove routine");
+  u("#routine_timer .container").remove();
+  myNS.routine_timer = null;
+  wakeLock.release();
+  wakeLock = null;
+  displayRoutineList();
+}
+
+const removeRoutineDetail = () => {
+  console.log("Remove Routine Detail");
+  u("#routine_detail .container").remove();
+}
 const displayRoutine = (routine) => {
+  // remove the list of routines
+  console.log("Remove Routine List");
   u("#routine_list .container").remove();
+
+  // display the routine
   document.getElementById("routine_detail").innerHTML = showRoutineDetail(routine);
+
+  // wire up the buttons
   u("#routine_detail #close").on("click", (ev) => {
-    u("#routine_detail .container").remove();
+    window.setTimeout(removeRoutineDetail, 0);
     displayRoutineList();
   });
   u("#routine_detail #start").on("click", (ev) => {
@@ -173,7 +185,13 @@ const displayRoutine = (routine) => {
 };
 
 const displayRoutineList = () => {
+
+  //build the list of routines
+  console.log("Display Routine List");
+  console.debug(routines.length);
   document.getElementById("routine_list").innerHTML = showListOfRoutines(routines);
+
+  // wire up click on card to display the routine
   u("#routine_list .card").on("click", (ev) => {
     var itemIndex = u(ev.currentTarget).data("item");
     displayRoutine(routines[itemIndex]);

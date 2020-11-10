@@ -54,7 +54,9 @@ export class RoutineTimerVM {
         } 
         this.update_ui_fn();
 
-        if (this.current && !this.current.alerting && this.current.time_left_ms < (this.current.alert_with_time_to_go * 1000)) {
+        if (this.current && 
+            !this.current.alerting && 
+            this.current.time_left_ms < (this.current.alert_with_time_to_go * 1000)) {
             this.current.alerting = true;
             this.alert_fn(this.current);
         }

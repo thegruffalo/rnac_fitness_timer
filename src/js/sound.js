@@ -12,6 +12,7 @@ export function beep(duration, frequency, volume, type, callback) {
     var oscillator = audioCtx.createOscillator();
     var gainNode = audioCtx.createGain();
 
+    console.log("Beep");
     oscillator.connect(gainNode);
     gainNode.connect(audioCtx.destination);
 

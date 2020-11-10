@@ -1,6 +1,6 @@
 export default
 {
-    "name": "Endurance Circuits - 30 30",
+    "name": "Endurance Circuits - 3 x 30/30",
     "sub_routines": [
         {
             "name": "Workout",

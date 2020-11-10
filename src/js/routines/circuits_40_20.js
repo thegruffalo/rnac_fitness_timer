@@ -1,6 +1,6 @@
 export default
 {
-    "name": "Endurance Circuits - 40 20",
+    "name": "Endurance Circuits - 4 x 40/20",
     "sub_routines": [
         {
             "name": "Workout",
@@ -70,7 +70,7 @@ export default
                     "duration": 20
                 }
             ],
-            "sets": 3,
+            "sets": 4,
             "duration_between_sets": 240,
             "start_delay": 5,
             "end_delay": 0
